@@ -6,19 +6,19 @@
 /* ---------- CSS Variables ---------- */
 :root {
   /* Theme Colors */
-    --red: #c72615;
+    --red: #A60321;
     --white: #fff;
+    --cream: #F2E9D8;
+    --brown: #8C5C32;
+    --chocolate: #2c1e16;
+    --coral: #D97B66;
     --black: #020202;
     --gray: #939393;
     --dk-gray: #222;
 
     /* Other Colors */
-    --lt-gray: #f2f2f2;
-    --purple: #6b1869;
-    --magenta: #eb1cf0;
-    --orange: #f97316;
-    --box-shadow-sm: -3px 3px 6px var(--lt-med-gray);
-    --box-shadow-lg: -6px 6px 10px var(--lt-med-gray);
+    --box-shadow-sm: -3px 3px 6px var(--gray);
+    --box-shadow-lg: -6px 6px 10px var(--gray);
 
     /* ----- FONTS ----- */
     --font-family: 'Cabin', 'Open Sans', sans-serif;
@@ -38,8 +38,8 @@
 }
 
 .menu-card {
-  background-color: #ffffff;
-  border: 1px solid #e5ddd5;
+  background-color: var(--cream);
+  border: 1px solid var(--brown);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -65,12 +65,12 @@
 
 .menu-price {
   font-weight: 700;
-  color: #8c4a27;
+  color: var(--brown);
 }
 
 .menu-meta {
   font-size: 0.85rem;
-  color: #6e6259;
+  color: var(--coral);
   margin: 0.35rem 0 0.75rem;
 }
 
@@ -91,8 +91,8 @@
   max-width: 1200px;
   margin: 1rem auto;
   padding: 1rem 1.5rem;
-  background-color: #f6ede6;
-  border-left: 5px solid #8c4a27;
+  background-color: var(--cream);
+  border-left: 5px solid var(--brown);
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
@@ -108,7 +108,7 @@
 .saved-order-banner p {
   margin: 0;
   font-weight: 600;
-  color: #2c1e16;
+  color: var(--chocolate);
 }
 
 .order-section {
@@ -139,15 +139,15 @@
 .form-group input,
 .form-group select {
   padding: 0.65rem 0.75rem;
-  border: 1px solid #cbbba0;
+  border: 1px solid var(--cream);
   border-radius: 6px;
   font-size: 1rem;
 }
 
 .btn-primary {
   padding: 0.7rem 1.25rem;
-  background-color: #8c4a27;
-  color: #ffffff;
+  background-color: var(--brown);
+  color: var(--white);
   border: none;
   border-radius: 6px;
   font-weight: 600;
@@ -157,8 +157,8 @@
 .btn-secondary {
   padding: 0.45rem 0.9rem;
   background-color: transparent;
-  color: #8c4a27;
-  border: 1px solid #8c4a27;
+  color: var(--brown);
+  border: 1px solid var(--brown);
   border-radius: 6px;
   cursor: pointer;
 }
