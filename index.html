@@ -23,13 +23,62 @@
         <main>
             <!-- Featured Menu Section populated via AJAX -->
             <section id="menu" class="menu-section">
-            <h2>Signature Café Menu</h2>
-            <p class="section-intro">Crafted daily using small-batch beans roasted in-house.</p>
+                <h2>Signature Café Menu</h2>
+                <p class="section-intro">Crafted daily using small-batch beans roasted in-house.</p>
 
-            <!-- AJAX content will be injected into this container -->
-            <div id="menu-grid" class="menu-grid" aria-live="polite">
-                <p class="loading-msg">Loading today's menu...</p>
-            </div>
+                <!-- AJAX content will be injected into this container -->
+                <div id="menu-grid" class="menu-grid" aria-live="polite">
+                    <p class="loading-msg">Loading today's menu...</p>
+                </div>
+            </section>
+            <!-- 1. Personalized Web Storage Banner (Hidden until an order is saved) -->
+            <aside id="saved-order-banner" class="saved-order-banner" hidden aria-live="polite">
+                <p id="saved-order-text"></p>
+                <button type="button" id="clear-order-btn" class="btn-secondary">Clear Saved Order</button>
+            </aside>
+
+            <!-- 2. Save Your Favorite Order Section -->
+            <section id="save-order" class="order-section">
+                <h2>Save Your Go-To Order</h2>
+                <p>Store your favorite drink in your browser so we remember it next time you visit.</p>
+
+                <form id="favorite-order-form" class="order-form">
+                    <div class="form-group">
+                    <label for="customer-name">Your Name</label>
+                    <input type="text" id="customer-name" name="customerName" placeholder="e.g., Jordan" required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="favorite-drink">Favorite Drink</label>
+                    <select id="favorite-drink" name="favoriteDrink" required>
+                        <option value="">-- Choose a drink --</option>
+                        <option value="Sonoran Honey Cortado">Sonoran Honey Cortado</option>
+                        <option value="Prickly Pear Cold Brew">Prickly Pear Cold Brew</option>
+                        <option value="Spiced Cardamom Oat Latte">Spiced Cardamom Oat Latte</option>
+                        <option value="Ethiopia Yirgacheffe Pour Over">Ethiopia Yirgacheffe Pour Over</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="milk-choice">Milk / Preference</label>
+                    <select id="milk-choice" name="milkChoice">
+                        <option value="Whole Milk">Whole Milk</option>
+                        <option value="Oat Milk">Oat Milk</option>
+                        <option value="Almond Milk">Almond Milk</option>
+                        <option value="Black / No Milk">Black / No Milk</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="temp-choice">Temperature</label>
+                    <select id="temp-choice" name="tempChoice">
+                        <option value="Hot">Hot</option>
+                        <option value="Iced">Iced</option>
+                    </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Save My Order</button>
+                </form>
             </section>
         </main>
   </body>

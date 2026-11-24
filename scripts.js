@@ -65,3 +65,84 @@ function loadCaféMenu() {
       console.warn("Menu AJAX request failed:", textStatus, errorThrown);
     });
 }
+
+"use strict";
+
+const STORAGE_KEY = "sunValleyFavoriteOrder";
+
+$(document).ready(function () {
+  // Check localStorage immediately when the page loads
+  displaySavedOrder();
+
+  // Handle form submission to save the order
+  $("#favorite-order-form").on("submit", function (event) {
+    event.preventDefault();
+
+    const orderData = {
+      name: $("#customer-name").val().trim(),
+      drink: $("#favorite-drink").val(),
+      milk: $("#milk-choice").val(),
+      temp: $("#temp-choice").val()
+    };
+
+    if (!orderData.name || !orderData.drink) {
+      return;
+    }
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(orderData));
+      displaySavedOrder();
+    } catch (error) {
+      console.warn("Could not save order to localStorage:", error);
+    }
+  });
+
+  // Handle clearing the saved order
+  $("#clear-order-btn").on("click", function () {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+      $("#saved-order-banner").attr("hidden", true);
+      $("#favorite-order-form")[0].reset();
+    } catch (error) {
+      console.warn("Could not remove order from localStorage:", error);
+    }
+  });
+});
+
+/**
+ * Reads saved order data from localStorage on page load or update
+ * and renders the personalized welcome banner.
+ */
+function displaySavedOrder() {
+  let rawData = null;
+
+  try {
+    rawData = localStorage.getItem(STORAGE_KEY);
+  } catch (error) {
+    console.warn("Unable to read from localStorage:", error);
+    return;
+  }
+
+  if (!rawData) {
+    return;
+  }
+
+  try {
+    const savedOrder = JSON.parse(rawData);
+
+    // Build text safely using .text() to prevent HTML injection
+    const message = `Welcome back, ${savedOrder.name}! Your usual order: ${savedOrder.temp} ${savedOrder.drink} (${savedOrder.milk}).`;
+
+    $("#saved-order-text").text(message);
+    $("#saved-order-banner").removeAttr("hidden");
+
+    // Pre-fill the form inputs so the user sees their saved selections
+    $("#customer-name").val(savedOrder.name);
+    $("#favorite-drink").val(savedOrder.drink);
+    $("#milk-choice").val(savedOrder.milk);
+    $("#temp-choice").val(savedOrder.temp);
+  } catch (error) {
+    console.warn("Corrupted localStorage data cleared:", error);
+    localStorage.removeItem(STORAGE_KEY);
+  }
+}
