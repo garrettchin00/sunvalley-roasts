@@ -1,0 +1,88 @@
+/* CSS BY Garrett Chin */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  /* Theme Colors */
+    --red: #c72615;
+    --white: #fff;
+    --black: #020202;
+    --gray: #939393;
+    --dk-gray: #222;
+
+    /* Other Colors */
+    --lt-gray: #f2f2f2;
+    --purple: #6b1869;
+    --magenta: #eb1cf0;
+    --orange: #f97316;
+    --box-shadow-sm: -3px 3px 6px var(--lt-med-gray);
+    --box-shadow-lg: -6px 6px 10px var(--lt-med-gray);
+
+    /* ----- FONTS ----- */
+    --font-family: 'Cabin', 'Open Sans', sans-serif;
+}
+
+.menu-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-card-body {
+  padding: 1.25rem;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.menu-price {
+  font-weight: 700;
+  color: #8c4a27;
+}
+
+.menu-meta {
+  font-size: 0.85rem;
+  color: #6e6259;
+  margin: 0.35rem 0 0.75rem;
+}
+
+/* Responsive breakpoint for Extra Credit */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

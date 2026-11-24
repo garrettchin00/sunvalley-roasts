@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to Sun Valley Roasts!">
+        <title>Sun Valley Roasts Coffee Co.</title>
+        <meta name="author" content="Garrett Chin">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Scripts loaded in <head> with defer in dependency order -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" defer></script>
+        <script src="scripts.js" defer></script>
+        <!-- FAVICON -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!-- GOOGLE FONTS LINKS -->
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+            <!-- Featured Menu Section populated via AJAX -->
+            <section id="menu" class="menu-section">
+            <h2>Signature Café Menu</h2>
+            <p class="section-intro">Crafted daily using small-batch beans roasted in-house.</p>
+
+            <!-- AJAX content will be injected into this container -->
+            <div id="menu-grid" class="menu-grid" aria-live="polite">
+                <p class="loading-msg">Loading today's menu...</p>
+            </div>
+            </section>
+        </main>
+  </body>
+</html>
