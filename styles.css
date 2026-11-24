@@ -28,6 +28,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .menu-grid {
@@ -35,6 +37,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .menu-card {
@@ -44,6 +48,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .menu-card-img {
@@ -54,6 +60,8 @@
 
 .menu-card-body {
   padding: 1.25rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .menu-card-header {
@@ -61,6 +69,8 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 0.5rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .menu-price {
@@ -103,11 +113,14 @@
 /* Ensure [hidden] attribute overrides display: flex */
 .saved-order-banner[hidden] {
   display: none;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .saved-order-banner p {
   margin: 0;
   font-weight: 600;
+  font-family: var(--font-family);
   color: var(--chocolate);
 }
 
@@ -115,6 +128,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .order-form {
@@ -123,17 +138,23 @@
   gap: 1rem;
   align-items: end;
   margin-top: 1.5rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .form-group label {
   font-size: 0.9rem;
   font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .form-group input,
@@ -142,6 +163,8 @@
   border: 1px solid var(--cream);
   border-radius: 6px;
   font-size: 1rem;
+  font-family: var(--font-family);
+  color: var(--chocolate);
 }
 
 .btn-primary {
