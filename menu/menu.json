@@ -1,0 +1,44 @@
+{
+  "menuItems": [
+    {
+      "id": "drink-1",
+      "name": "Sonoran Honey Cortado",
+      "category": "Espresso",
+      "price": "$4.75",
+      "roast": "Medium Roast",
+      "description": "Double shot of our house espresso cut with velvety steamed milk and local desert mesquite honey.",
+      "image": "images/honey-cortado.jpg",
+      "alt": "Glass cortado topped with microfoam and a drizzle of honey"
+    },
+    {
+      "id": "drink-2",
+      "name": "Prickly Pear Cold Brew",
+      "category": "Cold Brew",
+      "price": "$5.50",
+      "roast": "Medium-Dark Roast",
+      "description": "18-hour slow-steeped Colombian cold brew infused with house-made prickly pear reduction and lime zest.",
+      "image": "images/prickly-pear-coldbrew.jpg",
+      "alt": "Iced cold brew coffee with a magenta prickly pear swirl"
+    },
+    {
+      "id": "drink-3",
+      "name": "Spiced Cardamom Oat Latte",
+      "category": "Espresso",
+      "price": "$5.75",
+      "roast": "Medium Roast",
+      "description": "Rich espresso shaken with freshly ground green cardamom, brown sugar syrup, and creamy oat milk.",
+      "image": "images/cardamom-latte.jpg",
+      "alt": "Ceramic mug of oat milk latte dusted with ground cardamom"
+    },
+    {
+      "id": "drink-4",
+      "name": "Ethiopia Yirgacheffe Pour Over",
+      "category": "Single Origin",
+      "price": "$5.25",
+      "roast": "Light Roast",
+      "description": "Brewed to order on a Hario V60. Bright, floral cup with tasting notes of bergamot, jasmine, and white peach.",
+      "image": "images/ethiopian-pourover.jpg",
+      "alt": "Barista pouring hot water over coffee grounds in a glass dripper"
+    }
+  ]
+}
